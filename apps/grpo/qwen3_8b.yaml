@@ -39,6 +39,7 @@ policy:
     max_tokens: ${max_res_tokens}
     temperature: 1.0
     top_p: 1.0
+  prefetch_weights_to_shm: false
 
 # Trainer configuration
 trainer:
@@ -80,6 +81,7 @@ trainer:
   activation_checkpoint:
     mode: selective
     selective_ac_option: op
+  use_dcp: true
 
 # Replay buffer configuration
 replay_buffer:
